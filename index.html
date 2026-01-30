@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+    <h1>Controle de Estoque</h1>
+
+    <section class="formulario">
+    <h2>Cadastrar Produto</h2>
+
+    <div class="form-row">
+        <input type="text" id="nomeProduto" placeholder="Nome do produto">
+        <input type="number" id="quantidadeProduto" placeholder="Quantidade">
+        <button id="btnAdicionar" class="btn-principal">Adicionar</button>
+    </div>
+</section>
+
+
+    <section class="lista">
+        <h2>Produtos em Estoque</h2>
+
+        <div class="topo-lista">
+            <div class="acoes">
+    <button id="btnExportar">Exportar CSV</button>
+    <button id="btnLimpar" class="perigo">Limpar Estoque</button>
+</div>
+
+    <input type="text" id="buscaProduto" placeholder="Buscar produto...">
+    <div class="dashboard">
+        <span>Produtos Cadastrados: <b id="totalProdutos">0</b></span>
+        <span>Produtos com Estoque Baixo: <b id="totalBaixo">0</b></span>
+        <span>Total de Itens em Estoque: <b id="totalItens">0</b></span>
+    </div>
+</div>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaProdutos">
+               
+            </tbody>
+        </table>
+    </section>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
